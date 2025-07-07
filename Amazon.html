@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+        margin: 0;
+        font-family: Arial;
+        border: border-box;
+        }
+
+        .navbar {
+            height: 60px;
+            background-color: #131A22;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .nav-logo {
+            height: 50px;
+            width: 100px;
+        }
+
+        .logo {
+            background-image: url("amazon_logo.png");
+            background-size: cover;
+            height: 50px;
+            width: 100%;
+        }
+
+        .border {
+            border: 1.5px solid transparent;
+        }
+
+        .border:hover {
+            border: 1.5px solid white;
+        }
+
+        /** box2 **/
+        .add-first {
+            color: #cccccc;
+            font-size: 0.85rem;
+            margin-left: 15px;
+        }
+        .add-sec {
+            font-size: 1rem;
+            margin-left: 3px;
+        }
+        .add-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        /** box3 **/
+        .nav-search {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: pink;
+            width: 620px;
+            height: 40px;
+            border-radius: 4px;
+        }
+        .search-select {
+            background-color: #f3f3f3;
+            width: 50px;
+            text-align: center;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border: none;
+        }
+        .search-input {
+            width: 100%;
+            font-size: 1rem;
+            border: none;
+        }
+        .search-icon {
+            width: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            background-color: #febd68;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            color: #0f1111;
+        }
+        .nav-search:hover {
+            border: 2px solid #febd68;
+        }
+        .voice-icon {
+            width: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            background-color: #febd68;
+            color: #0f1111;
+        }
+
+        .voice-icon.listening {
+            background: #e47911;
+        }
+
+        .nav-search:hover {
+            border: 2px solid #febd68;
+        }
+
+        /** box4 **/    
+        .span {
+            font-size: 0.7rem;
+        }
+        .nav-second {
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        /** box6 **/
+        .nav-cart i {
+            font-size: 30px;
+        }
+        .nav-cart {
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        /** panel **/
+        .panel {
+            height: 40px;
+            background-color: #222f3d;
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .panel-ops p {
+            display: inline;
+            margin-left: 10px;
+        }
+        .panel-ops {
+            width: 70%;
+            font-size: 0.85rem;
+        }
+        .panel-deals {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        /** hero section **/
+        .hero-section {
+            background-image: url("hero_image.jpg");
+            background-size: cover;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .hero-message {
+            background-color: white;
+            color: black;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            width: 80%;
+            margin-bottom: 25px;
+        }
+        .hero-message a {
+            color: #007185;
+        }
+
+        /** shop section **/
+        .shop-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #e2e7e2;
+        }
+        .box {
+            /*border: 2px solid black;*/
+            height: 400px;
+            width: 23%;
+            background-color: white;
+            padding: 20px 0px 15px;
+            margin-top: 15px
+        }
+        .box-img {
+            height: 300px;
+            background-size: cover;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .box-content {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        .box-content p {
+            color: #007185;
+        }
+        .spacer {
+            height: 30px;
+        }
+
+        /** footer **/
+        .footer {
+            margin-top: 25px;
+        }
+        .foot-panel1 {
+            background-color: #37475a;
+            color: white;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+        .foot-panel2 {
+            background-color: #222f3d;
+            color: white;
+            height: 300px;
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+        ul {
+            margin-top: 20px;
+        }
+        ul a {
+            display: block;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            color: #dddddd;
+        }
+
+        .foot-panel3 {
+            background-color: #222f3d;
+            color: white;
+            border-top: 0.5px solid #3a4553;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            background-image: url("amazon_logo.png");
+            background-size: cover;
+            height: 50px;
+            width: 100px;
+        }
+        .footer-boxes {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .footer-box {
+            border: 1px solid #848688;
+            padding: 8px 10px;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background-color: #222f3d;
+            color: white;
+        }
+        
+        .footer-box img {
+            width: 20px;
+            height: 13px;
+        }
+        
+        .foot-panel4 {
+            background-color: #131A22;
+            color: white;
+            height: 100px;
+            font-size: 0.7rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pages {
+            padding-top: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .copyright {
+            padding-top: 10px;
+        }
+
+        /* Chatbot Container */
+        #chatbot-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        font-family: Arial, sans-serif;
+        }
+
+        #chat-toggle {
+        background: #232f3e;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        #chat-widget {
+        display: none;
+        flex-direction: column;
+        width: 300px;
+        height: 400px;
+        margin-top: 10px;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        #chat-header {
+        background: #131A22;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        text-align: center;
+        }
+
+        #chat-messages {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        font-size: 14px;
+        }
+        #chat-messages .user {
+        text-align: right;
+        margin: 5px 0;
+        }
+        #chat-messages .bot {
+        text-align: left;
+        margin: 5px 0;
+        color: #007185;
+        }
+
+        #chat-input-area {
+        display: flex;
+        border-top: 1px solid #ccc;
+        }
+        #chat-input {
+        flex: 1;
+        border: none;
+        padding: 10px;
+        font-size: 14px;
+        outline: none;
+        }
+        #chat-send {
+        background: #febd68;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-address border">
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-sec">India</p>
+                </div>
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input id="search-input" placeholder="Search Amazon" class="search-input">
+                <div id="voice-btn" class="voice-icon" title="Voice Search">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="nav-signin border">
+                <p><span>Hello, sign in</span></p>
+                <p class="nav-second">Account & Lists</p>
+            </div>
+            <div class="nav-return border">
+                <p><span>Returns</span></p>
+                <p class="nav-second">& Orders</p>
+            </div>
+            <div class="nav-cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-all">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="panel-ops">
+                <p>Today's Deals</p>
+                <p>Customer Service</p>
+                <p>Registry</p>
+                <p>Gift Cards</p>
+                <p>Sell</p>
+            </div>
+            <div class="panel-deals">
+                Shop deals in Electronics
+            </div>
+
+        </div>
+    </header>
+    <div class="hero-section">
+        <div class="hero-message">
+            You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.<a href="https://www.amazon.in">Click here to go to amazon.in</a>
+        </div>
+    </div>
+    <div class="shop-section">
+        <div class="box">
+            <div class="box-content">
+                <h2>Clothing</h2>
+                <div class="box-img" style="background-image: url('box1_image.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Health & Personal Care</h2>
+                <div class="box-img" style="background-image: url('box2_image.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Furniture</h2>
+                <div class="box-img" style="background-image: url('box3_image.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Electronics</h2>
+                <div class="box-img" style="background-image: url('box4_image.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Beauty Picks</h2>
+                <div class="box-img" style="background-image: url('box5_image.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Pet Supplies</h2>
+                <div class="box-img" style="background-image: url('box6_image.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>New arrivals in Toys</h2>
+                <div class="box-img" style="background-image: url('box7_image.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Discover fashion trends</h2>
+                <div class="box-img" style="background-image: url('box8_image.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div id="chatbot-container">
+        <button id="chat-toggle">
+        <i class="fa-brands fa-rocketchat"></i> 
+        </button>
+        <div id="chat-widget">
+        <div id="chat-header">Chat with us!</div>
+        <div id="chat-messages"></div>
+        <div id="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Type a message…" />
+            <button id="chat-send">Send</button>
+        </div>
+        </div>
+    </div>
+  
+    <footer>
+        <div class="foot-panel1">
+            Back to top
+        </div>
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Make Money with Us</p>
+                <a>Sell products on Amazon</a>
+                <a>Sell on Amazon Business</a>
+                <a>Sell apps on Amazon</a>
+                <a>Become an Affiliate</a>
+                <a>Advertise Your Products</a>
+                <a>Self-Publish with Us</a>
+                <a>Host an Amazon Hub</a>
+                <a>->See More Make Money with Us</a>
+            </ul>
+            <ul>
+                <p>Amazon Payment Products</p>
+                <a>Amazon Business Card</a>
+                <a>Shop with Points</a>
+                <a>Reload Your Balance</a>
+                <a>Amazon Currency Converter</a>
+            </ul>
+            <ul>
+                <p>Let Us Help You</p>
+                <a>Amazon and COVID-19</a>
+                <a>Your Account</a>
+                <a>Your Orders</a>
+                <a>Shipping Rates & Policies</a>
+                <a>Returns & Replacements</a>
+                <a>Manage Your Content and Devices</a>
+                <a>Amazon Assistant</a>
+                <a>Help</a>
+            </ul>
+        </div>
+        <div class="foot-panel3">
+            <div class="logo"></div>
+            <div class="footer-boxes">
+                <div class="footer-box">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>English</span>
+                    <i class="fa-solid fa-caret-down"></i>                    
+                </div>
+                <div class="footer-box">
+                  ₹ INR - Indian Rupee
+                </div>
+                <div class="footer-box">
+                    <i class="fa-solid fa-flag"></i>United States
+                </div>
+              </div>              
+        </div>
+        <div class="foot-panel4">
+            <div class="pages">
+                <p>Conditions of Use</p>
+                <p>Privacy Notice</p>
+                <p>Your Ads Privacy Choices</p>
+            </div>
+            <div class="copyright">
+                <p>© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+            </div>
+    </footer>
+    <script>
+        const voiceBtn = document.getElementById('voice-btn');
+        const searchInput = document.querySelector('.search-input');
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    
+        if (!SpeechRecognition) {
+            voiceBtn.style.opacity = '0.5';
+            voiceBtn.disabled = true;
+            voiceBtn.title = 'Voice search not supported in this browser';
+        } else {
+            const recognition = new SpeechRecognition();
+            recognition.lang = 'en-IN';
+            recognition.interimResults = false;
+    
+            voiceBtn.addEventListener('click', () => {
+                recognition.start();
+                voiceBtn.classList.add('listening');
+                voiceBtn.disabled = true;
+            });
+    
+            recognition.addEventListener('result', (event) => {
+                const transcript = event.results[0][0].transcript;
+                searchInput.value = transcript;
+                searchInput.dispatchEvent(new Event('input'));
+            });
+    
+            recognition.addEventListener('end', () => {
+                voiceBtn.classList.remove('listening');
+                voiceBtn.disabled = false;
+            });
+    
+            recognition.addEventListener('error', () => {
+                voiceBtn.classList.remove('listening');
+                voiceBtn.disabled = false;
+            });
+        }
+    
+        searchInput.addEventListener('input', () => {
+            const query = searchInput.value.trim().toLowerCase();
+            document.querySelectorAll('.box').forEach(box => {
+                const title = box.querySelector('h2').textContent.toLowerCase();
+                box.style.display = title.includes(query) ? 'block' : 'none';
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const chatToggle = document.getElementById('chat-toggle');
+        const chatWidget = document.getElementById('chat-widget');
+        const chatInput = document.getElementById('chat-input');
+        const chatSendButton = document.getElementById('chat-send');
+        const chatMessages = document.getElementById('chat-messages');
+
+        chatToggle.addEventListener('click', function() {
+            if (chatWidget.style.display === 'none' || chatWidget.style.display === '') {
+            chatWidget.style.display = 'flex';
+            } else {
+            chatWidget.style.display = 'none';
+            }
+        });
+
+        function addBotMessage(message) {
+            const botMessage = document.createElement('div');
+            botMessage.classList.add('bot');
+            botMessage.textContent = message;
+            chatMessages.appendChild(botMessage);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        chatSendButton.addEventListener('click', function() {
+            const userMessage = chatInput.value.trim();
+            if (userMessage !== '') {
+            const userMessageElement = document.createElement('div');
+            userMessageElement.classList.add('user');
+            userMessageElement.textContent = userMessage;
+            chatMessages.appendChild(userMessageElement);
+            chatInput.value = '';
+            setTimeout(() => {
+                addBotMessage('This is a bot response!');
+            }, 1000);
+            }
+        });
+
+        chatInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+            chatSendButton.click();
+            }
+        });
+        });
+
+    </script>    
+</body>
+</html>
